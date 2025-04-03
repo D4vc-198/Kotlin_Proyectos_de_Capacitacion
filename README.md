@@ -6,8 +6,11 @@ Bienvenido al repositorio donde se almacenan los proyectos desarrollados durante
 
 Este repositorio incluye los siguientes proyectos:
 
-- **Proyecto 1: Cómo agregar una lista desplazable**
+- **Proyecto 1: Affirmation App**
   - crear una lista desplazable en tu app con Jetpack Compose.
+
+- **Proyecto 2: Courses App**
+  - crear una cuadricula en tu app con Jetpack Compose.
 
 
 ## Tecnologías Utilizadas
