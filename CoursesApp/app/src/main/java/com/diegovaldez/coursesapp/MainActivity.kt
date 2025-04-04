@@ -40,6 +40,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -53,11 +54,19 @@ class MainActivity : ComponentActivity() {
         setContent {
             CoursesAppTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize()
-                    .statusBarsPadding(),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .statusBarsPadding(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    TopicGrid()
+                    TopicGrid(
+                        modifier = Modifier.padding(
+                            start = 8.dp,
+                            top = 8.dp,
+                            end = 8.dp,
+                            bottom = 8.dp
+                        )
+                    )
                 }
             }
         }
@@ -66,7 +75,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
-    Card(modifier = Modifier) {
+    Card {
         // Row que contiene la imagen principal
         Row {
             Image(
@@ -94,7 +103,7 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = "${topic.numberCourse}",
+                        text = topic.numberCourse.toString(),
                         style = MaterialTheme.typography.labelMedium
                     )
                 }
@@ -104,11 +113,12 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun TopicGrid( modifier: Modifier = Modifier) {
+fun TopicGrid(modifier: Modifier = Modifier) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = modifier
     ) {
         items(DataSource.topics.size) { index ->
             val topic = DataSource.topics[index]
