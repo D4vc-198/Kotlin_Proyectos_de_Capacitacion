@@ -12,6 +12,8 @@ Este repositorio incluye los siguientes proyectos:
 - **Proyecto 2: Courses App**
   - crear una cuadricula en tu app con Jetpack Compose.
 
+- **Proyecto 3: Woof App**
+  - crear una app que muestra una lista de perros y usa Material Design para crear una experiencia de app atractiva.
 
 ## Tecnologías Utilizadas
 
