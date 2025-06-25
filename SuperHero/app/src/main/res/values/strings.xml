@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SuperHero</string>
+    <string name="hero1">Lumina Vortex</string>
+    <string name="description1">Controla la luz y la distorsiona para atacar o desaparecer.</string>
+    <string name="hero2">Titan de Acero</string>
+    <string name="description2">Un ser con fuerza sobrehumana y piel metálica indestructible</string>
+    <string name="hero3">Eco Fantasma</string>
+    <string name="description3">Puede replicar habilidades que escucha o ve, como un eco viviente</string>
+    <string name="hero4">Sombra Fénix</string>
+    <string name="description4">Se oculta entre las sombras y renace más fuerte tras cada derrota</string>
+    <string name="hero5">Voltaria</string>
+    <string name="description5">Maestra de la electricidad, puede hackear tecnología y lanzar rayos</string>
+    <string name="hero6">Crono Lince</string>
+    <string name="description6">Tiene reflejos felinos y puede ralentizar el tiempo unos segundos</string>
+</resources>
